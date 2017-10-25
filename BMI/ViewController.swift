@@ -8,25 +8,24 @@
 
 import UIKit
 
+var user_height: String = ""
+var user_weight: String = ""
+
+
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var Height_UserInput: UITextField!
-    
-    
     @IBOutlet weak var Weight_UserInput: UITextField!
     
     
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
     
-
-    var user_height: String = ""
-    var user_weight: String = ""
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         Height_UserInput.delegate = self
         Weight_UserInput.delegate = self
         
@@ -44,6 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         user_weight = Weight_UserInput.text!
         textLabel2.text = user_weight
+        
     }
 
 
