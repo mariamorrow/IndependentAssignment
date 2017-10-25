@@ -19,8 +19,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
     
+
     var user_height: String = ""
     var user_weight: String = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         user_height = Height_UserInput.text!
         testLabel.text = user_height
         
