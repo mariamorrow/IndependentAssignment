@@ -8,9 +8,9 @@
 
 import UIKit
 
-var user_height: String = ""
-var user_weight: String = ""
 
+    var user_height: String = ""
+    var user_weight: String = ""
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
+    
     
     
     override func viewDidLoad() {

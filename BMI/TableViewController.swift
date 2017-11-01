@@ -10,7 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let displayArray = [ "", user_height, user_weight, ""]
+    let displayArray = [ "", user_height, user_weight, "BMI", "Warning"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 5
     }
 
 
