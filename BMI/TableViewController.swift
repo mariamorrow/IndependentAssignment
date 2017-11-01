@@ -10,8 +10,9 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let displayArray = [ "", user_height, user_weight, "BMI", "Warning"]
+    let instancecalculator = calculator()
     
+    var displayArray = [ "", user_height, user_weight, "BMI", "Warning"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

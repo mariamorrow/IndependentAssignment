@@ -12,6 +12,16 @@ import UIKit
     var user_height: String = ""
     var user_weight: String = ""
 
+class calculator {
+    func BodyMassIndex () -> Double {
+    let user_height_value = Double(user_height)
+    let user_weight_value = Double(user_weight)
+        
+     let BMI_value = 0.45*user_weight_value!/((user_height_value!*0.025)*(user_height_value!*0.025))
+        return BMI_value
+    }
+}
+
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var Height_UserInput: UITextField!
