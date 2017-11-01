@@ -42,11 +42,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        user_height = Height_UserInput.text!
+        user_height = "Height: "
+        user_height += Height_UserInput.text!
+        user_height += " inches "
         testLabel.text = user_height
         
-        user_weight = Weight_UserInput.text!
+        user_weight = "Weight: "
+        user_weight += Weight_UserInput.text!
         textLabel2.text = user_weight
+        user_weight += " lbs"
         
     }
 
