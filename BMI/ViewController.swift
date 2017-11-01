@@ -36,6 +36,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func ViewChange(_ sender: Any) {
+        
+        
+    }
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         user_height = Height_UserInput.text!
