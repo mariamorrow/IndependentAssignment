@@ -9,10 +9,8 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
-    let instancecalculator = calculator()
-    
-    var displayArray = [ "", user_height, user_weight, "BMI", "Warning"]
+
+var displayArray = ["","","","",""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +20,9 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let BMInum = someBMI.calculate().number
+        let BMItext = someBMI.calculate().text
+        displayArray = [ "", someBMI.user_height, someBMI.user_weight, BMInum, BMItext]
     }
 
     override func didReceiveMemoryWarning() {

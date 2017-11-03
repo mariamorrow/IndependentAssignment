@@ -15,6 +15,7 @@
 		13B5E5581FA122B4008A4F68 /* BMITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B5E5571FA122B4008A4F68 /* BMITests.swift */; };
 		13B5E5631FA122B4008A4F68 /* BMIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B5E5621FA122B4008A4F68 /* BMIUITests.swift */; };
 		13B5E5711FA13767008A4F68 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B5E5701FA13767008A4F68 /* TableViewController.swift */; };
+		13DCA3F01FAD09BE00C89E05 /* BMI_Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DCA3EF1FAD09BE00C89E05 /* BMI_Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		13B5E5621FA122B4008A4F68 /* BMIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIUITests.swift; sourceTree = "<group>"; };
 		13B5E5641FA122B4008A4F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B5E5701FA13767008A4F68 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		13DCA3EF1FAD09BE00C89E05 /* BMI_Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMI_Class.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		13B5E5411FA122B4008A4F68 /* BMI */ = {
 			isa = PBXGroup;
 			children = (
+				13DCA3EF1FAD09BE00C89E05 /* BMI_Class.swift */,
 				13B5E5421FA122B4008A4F68 /* AppDelegate.swift */,
 				13B5E5441FA122B4008A4F68 /* ViewController.swift */,
 				13B5E5461FA122B4008A4F68 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				13B5E5451FA122B4008A4F68 /* ViewController.swift in Sources */,
 				13B5E5711FA13767008A4F68 /* TableViewController.swift in Sources */,
 				13B5E5431FA122B4008A4F68 /* AppDelegate.swift in Sources */,
+				13DCA3F01FAD09BE00C89E05 /* BMI_Class.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +524,7 @@
 				13B5E5691FA122B4008A4F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13B5E56A1FA122B4008A4F68 /* Build configuration list for PBXNativeTarget "BMITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				13B5E56C1FA122B4008A4F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13B5E56D1FA122B4008A4F68 /* Build configuration list for PBXNativeTarget "BMIUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				13B5E56F1FA122B4008A4F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

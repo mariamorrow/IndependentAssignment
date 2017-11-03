@@ -8,19 +8,7 @@
 
 import UIKit
 
-
-    var user_height: String = ""
-    var user_weight: String = ""
-
-class calculator {
-    func BodyMassIndex () -> Double {
-    let user_height_value = Double(user_height)
-    let user_weight_value = Double(user_weight)
-        
-     let BMI_value = 0.45*user_weight_value!/((user_height_value!*0.025)*(user_height_value!*0.025))
-        return BMI_value
-    }
-}
+let someBMI = BMIcalculator()
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -31,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
     
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,15 +41,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        user_height = "Height: "
-        user_height += Height_UserInput.text!
-        user_height += " inches "
-        testLabel.text = user_height
+        someBMI.user_height = "Height: "
+        someBMI.user_height += Height_UserInput.text!
+        someBMI.user_height += " inches "
+        testLabel.text = someBMI.user_height
         
-        user_weight = "Weight: "
-        user_weight += Weight_UserInput.text!
-        textLabel2.text = user_weight
-        user_weight += " lbs"
+        someBMI.user_weight = "Weight: "
+        someBMI.user_weight += Weight_UserInput.text!
+        textLabel2.text = someBMI.user_weight
+        someBMI.user_weight += " lbs"
         
     }
 
