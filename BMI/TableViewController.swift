@@ -22,7 +22,16 @@ var displayArray = ["","","","",""]
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         let BMInum = someBMI.calculate().number
         let BMItext = someBMI.calculate().text
-        displayArray = [ "", someBMI.user_height, someBMI.user_weight, BMInum, BMItext]
+        
+        var heightdisplay = "Height: "
+        heightdisplay += someBMI.user_height
+        heightdisplay += "inches"
+        
+        var weightdisplay = "Weight: "
+        weightdisplay += someBMI.user_weight
+        weightdisplay += "lbs"
+        
+        displayArray = [ "", heightdisplay, weightdisplay, BMInum, BMItext]
         
 
     }
