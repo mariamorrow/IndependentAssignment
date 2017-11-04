@@ -60,19 +60,21 @@ class BMIcalculator {
 */
     
     func calculate () -> (number: String, text: String) {
-        if (user_height != "" && user_weight != "") {
+        if (user_height == nil && user_weight == nil) {
+                print("Error")
+           
+        }
+        else
+        {
             user_height_value = Double(user_height)!
             user_weight_value = Double(user_weight)!
             bmi_value = (user_weight_value*0.45)/((user_height_value*0.025)*(user_height_value*0.025))
             
             print(bmi_value)
             print("Hi")
+            bmi = String(bmi_value)
         }
-        else{
-            print("Error")
-        }
-        
-        bmi = String(bmi_value)
+
 
         if bmi_value < 18.5 {
             message = "Your BMI indicates that you are underweight. Go eat some donuts."

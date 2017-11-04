@@ -34,22 +34,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
+ 
     @IBAction func ViewChange(_ sender: Any) {
         
         
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        someBMI.user_height = "Height: "
+        if textField == Height_UserInput {
+        //someBMI.user_height = "Height: "
         someBMI.user_height += Height_UserInput.text!
-        someBMI.user_height += " inches "
+        //someBMI.user_height += " inches "
         testLabel.text = someBMI.user_height
-        
-        someBMI.user_weight = "Weight: "
+        }
+        if textField == Weight_UserInput {
+        //someBMI.user_weight = "Weight: "
         someBMI.user_weight += Weight_UserInput.text!
         textLabel2.text = someBMI.user_weight
-        someBMI.user_weight += " lbs"
+        //someBMI.user_weight += " lbs"
+        }
+        else {
+            print("Error")
+        }
         
     }
 
