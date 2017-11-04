@@ -23,6 +23,8 @@ var displayArray = ["","","","",""]
         let BMInum = someBMI.calculate().number
         let BMItext = someBMI.calculate().text
         displayArray = [ "", someBMI.user_height, someBMI.user_weight, BMInum, BMItext]
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +49,10 @@ var displayArray = ["","","","",""]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.numberOfLines = 0;
+        cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.text = displayArray[indexPath.row]
+
         
         return cell
     }
