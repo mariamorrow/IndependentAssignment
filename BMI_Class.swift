@@ -19,76 +19,47 @@ class BMIcalculator {
     var bmi: String = ""
     var message: String = ""
     
-/*    func calculate () -> Double {
-        if (user_height != "" && user_weight != "") {
-        user_height_value = Double(user_height)!
-        user_weight_value = Double(user_weight)!
-        bmi_value = (user_weight_value*0.45)/((user_height_value*0.025)*(user_height_value*0.025))
-        
-        print(bmi_value)
-        print("Hi")
-        }
-        else{
-            print("Error")
-        }
-    return bmi_value
-    }
-    
-    func display () -> String
-    {
-        bmi = String(bmi_value)
-        return bmi
-
-    }
-    
-    func evaluation () -> String
-    {
-        if bmi_value < 18.5 {
-            message = "Your BMI indicates that you are underweight. Go eat some donuts."
-        }
-        else if bmi_value < 24.9 {
-            message = "Your BMI indicates that your weight is normal. Congrats! Keep it up!"
-        }
-        else if bmi_value < 29.9 {
-            message = "Your BMI indicates that you are overweight. You may want to consider laying off the Halloween candy"
-        }
-        else {
-            message = "Your BMI indicates that you are obese. NO MORE CANDY"
-        }
-        return message
-    }
-*/
+    let characters = CharacterSet.decimalDigits.inverted
     
     func calculate () -> (number: String, text: String) {
-        if (user_height == nil && user_weight == nil) {
-                print("Error")
-           
+        if user_height == "" || user_weight == "" {
+            print("Nil Error")
+            message = "Height and/or weight were entered incorrectly. Please try again"
         }
-        else
-        {
+        else if user_height.rangeOfCharacter(from: characters) != nil {
+            print("user_height Nil Error")
+            message = "Please enter your height and weight with numbers only"
+        }
+        else if user_weight.rangeOfCharacter(from: characters) != nil {
+            print("user_weight Nil Error")
+            message = "Please enter your height and weight with numbers only"
+        }
+        else {
             user_height_value = Double(user_height)!
             user_weight_value = Double(user_weight)!
             bmi_value = (user_weight_value*0.45)/((user_height_value*0.025)*(user_height_value*0.025))
             
             print(bmi_value)
-            print("Hi")
+        
             bmi = String(bmi_value)
+        if user_height_value < 12 {
+        message = "Your height was likely entered incorrectly. Be sure to enter your height in inches"
         }
-
-
-        if bmi_value < 18.5 {
+        else {
+        if bmi_value < 19 {
             message = "Your BMI indicates that you are underweight. Go eat some donuts."
         }
         else if bmi_value < 24.9 {
             message = "Your BMI indicates that your weight is normal. Congrats! Keep it up!"
         }
         else if bmi_value < 29.9 {
-            message = "Your BMI indicates that you are overweight. You may want to consider laying off the Halloween candy"
+            message = "Your BMI indicates that you are overweight. Slow down on the candy consumption"
         }
         else {
             message = "Your BMI indicates that you are obese. NO MORE CANDY"
         }
+        }
+        }
         return (bmi,message)
-    }
-    
+}
 }

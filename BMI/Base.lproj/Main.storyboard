@@ -46,29 +46,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F5-jv-Oae">
-                                <rect key="frame" x="183" y="556" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ENTER"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F5-jv-Oae">
+                                <rect key="frame" x="155" y="472" width="105" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="ViewChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXE-5c-YGm"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g16-ms-nfR" firstAttribute="top" secondItem="y9c-DV-PY3" secondAttribute="bottom" constant="32" id="004-u8-Me3"/>
                             <constraint firstItem="y9c-DV-PY3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="2bV-LP-7nz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Etz-nn-Nc4" secondAttribute="trailing" constant="111" id="4bd-QR-dDg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lJK-3Z-xdF" secondAttribute="trailing" constant="204" id="5jh-ph-8B8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0F5-jv-Oae" secondAttribute="trailing" constant="134" id="6QB-65-S21"/>
                             <constraint firstItem="y9c-DV-PY3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7vw-bH-f6q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g16-ms-nfR" secondAttribute="trailing" constant="114" id="Eja-YC-jaF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y9c-DV-PY3" secondAttribute="trailing" constant="215" id="Jut-2y-Zhu"/>
                             <constraint firstItem="Etz-nn-Nc4" firstAttribute="top" secondItem="lJK-3Z-xdF" secondAttribute="bottom" constant="30" id="bgY-VJ-8tv"/>
+                            <constraint firstItem="0F5-jv-Oae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="135" id="cVo-FP-dDV"/>
                             <constraint firstItem="lJK-3Z-xdF" firstAttribute="top" secondItem="g16-ms-nfR" secondAttribute="bottom" constant="87" id="fNd-IG-XGF"/>
                             <constraint firstItem="Etz-nn-Nc4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="p2E-HA-PAj"/>
                             <constraint firstItem="g16-ms-nfR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="rM1-xe-CbT"/>
                             <constraint firstItem="lJK-3Z-xdF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wIv-JC-mvU"/>
+                            <constraint firstItem="0F5-jv-Oae" firstAttribute="top" secondItem="Etz-nn-Nc4" secondAttribute="bottom" constant="132" id="ywo-HG-n5h"/>
                         </constraints>
                     </view>
                     <connections>
@@ -89,6 +95,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mgf-Hy-QVr">
+                            <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="KV9-OJ-eFp"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="q0S-3W-5IQ" style="IBUITableViewCellStyleDefault" id="99k-be-o1Y">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
