@@ -46,27 +46,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP8-BI-WFt">
-                                <rect key="frame" x="119" y="403" width="201" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfx-iu-Y29">
-                                <rect key="frame" x="119" y="496" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F5-jv-Oae">
                                 <rect key="frame" x="183" y="556" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ENTER"/>
                                 <connections>
                                     <action selector="ViewChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXE-5c-YGm"/>
-                                    <segue destination="192-Bx-wXE" kind="show" id="nz5-Gb-iFd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,8 +74,7 @@
                     <connections>
                         <outlet property="Height_UserInput" destination="g16-ms-nfR" id="uSS-pO-Ovo"/>
                         <outlet property="Weight_UserInput" destination="Etz-nn-Nc4" id="TuT-4s-PpY"/>
-                        <outlet property="testLabel" destination="pP8-BI-WFt" id="KsH-xE-0GP"/>
-                        <outlet property="textLabel2" destination="Cfx-iu-Y29" id="6S3-dG-5ea"/>
+                        <segue destination="192-Bx-wXE" kind="show" identifier="seguetoTVC" id="OuH-uj-OAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

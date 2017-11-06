@@ -14,20 +14,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var Height_UserInput: UITextField!
     @IBOutlet weak var Weight_UserInput: UITextField!
-    
-    
-    @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var textLabel2: UILabel!
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         Height_UserInput.delegate = self
         Weight_UserInput.delegate = self
-        
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -36,29 +29,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
  
     @IBAction func ViewChange(_ sender: Any) {
-        
+       performSegue(withIdentifier: "seguetoTVC", sender: self)
         
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         if textField == Height_UserInput {
-        //someBMI.user_height = "Height: "
-        someBMI.user_height += Height_UserInput.text!
-        //someBMI.user_height += " inches "
-        testLabel.text = someBMI.user_height
+        someBMI.user_height = Height_UserInput.text!
+
         }
-        if textField == Weight_UserInput {
-        //someBMI.user_weight = "Weight: "
-        someBMI.user_weight += Weight_UserInput.text!
-        textLabel2.text = someBMI.user_weight
-        //someBMI.user_weight += " lbs"
+        else if textField == Weight_UserInput {
+        someBMI.user_weight = Weight_UserInput.text!
+ 
         }
         else {
-            print("Error")
+            print("UI Text Field Error")
         }
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        someBMI.user_height = Height_UserInput.text!
+        someBMI.user_weight = Weight_UserInput.text!
+        print(someBMI.user_height)
+        print(someBMI.user_weight)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
